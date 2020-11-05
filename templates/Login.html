@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width", initial-scale=1.0>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='Login_style.css')}}" >
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c87f5850c4.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class = "container">
+        
+        <div class = "header">
+            <h2>LOGIN</h2>
+        </div>
+
+        <form class = "form" id = "form" method = "POST" action = "{{ url_for('send') }}">
+            <div class = "formInput">
+                <label>username</label>
+                <input type = "text" placeholder = "username" id = "username" name = "username">
+                <h6>Error Message</h6>
+            </div>
+
+            <div class = "formInput">
+                <label>password</label>
+                <input type = "password" placeholder = "password" id = "password1" name = "password">
+                <h6>Error Message</h6>
+            </div>
+
+            <div class = "formInput">
+                <input type = "submit" value = "LOGIN" id = "button">
+                <h6>Error Message</h6>
+            </div>
+        </form>
+
+    </div>
+
+    <!--<script src = "{{ url_for('static', filename='Login_script.js')}}"></script>-->
+</body>
